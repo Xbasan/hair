@@ -1,0 +1,77 @@
+
+nav{
+    max-width: 90%;
+  }
+
+section main{
+  position: relative;
+
+   width: 100%;
+   height: auto; 
+}
+
+section main h1{
+  font-size: 32px;
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+
+section main .h2_abaut_em{
+  font-size: 20px;
+}
+
+section main button{
+  width: 200px; 
+  height: 60px; 
+
+  font-size: 20px;
+  position: absolute;
+  bottom: -400px;
+  left: 58px;
+}
+
+.application{
+  margin-top: 240px;
+
+  width: 400px;
+  height: 600px;
+}
+
+footer{
+    position: absolute;
+    bottom: 0px;
+}
+
+.post{
+  min-width: 420px;
+  min-height: 310px;
+
+  box-shadow: none;
+}
+
+.post .slider{
+  width: 420px;
+  height: auto;
+}
+
+.post .slider .publication{
+  max-width: 420px;
+  height: auto;
+}
+
+.slider .publication img{
+  max-width: 420px;
+  max-height: 260px;
+}
+.slider .publication video{
+  max-width: 420px;
+  max-height: 260px;
+}
+
+.description{
+  width: 400px;
+}
+
+footer{
+  gap: 4vh;
+}
