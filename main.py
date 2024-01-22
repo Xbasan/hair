@@ -3,13 +3,13 @@ from flask import Flask, render_template, request
 import json
 import telebot
 
-bot = telebot.TeleBot('5473853379:AAGy2mEkaKNlLmOS2r4kIZxbVVxhC-LxnQQ')
+bot = telebot.TeleBot('идентицыонный ключ бота')
 
 app = Flask(__name__)
 
 
 def sending_message(data):
-    bot.send_message(-1001815673799,
+    bot.send_message(id чата в виде числа ,
                      f'ФИО: {data["fio"]}\n'
                      f'Название оргонизацыи: {data["organization"]}\n'
                      f'Описание Продукта или Услуги: {data["description"]}\n'
