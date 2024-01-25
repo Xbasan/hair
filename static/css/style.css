@@ -492,7 +492,7 @@ main button {
   box-shadow: 0 0 1000px 400px rgba(2, 255, 129, 0.795);
 
   position: absolute;
-  top:50%;
+  top:60%;
   left:50%;
   transform:translate(-50%, -50%);  
   
@@ -573,6 +573,9 @@ to {
 
 
 .news{
+  max-width: 120dvh;
+  height: auto;
+
   display: flex;
   flex-direction: column;
   justify-content: center;

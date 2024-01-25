@@ -1,10 +1,11 @@
 import os
 
+
 files_in_directory = os.listdir('./static/publication')
 
 def publication_(type,file, publication_,slide_img_num,slide_num,):
     #  <{type} class="slide_img_{slide_img_num} slide{slide_num}" src="{{url_for('static', publication='{file}/{publication_}')}}" alt="Чето не так" />
-    return f'''<{type}   class="slide_img_{slide_img_num} slide{slide_num}" src="./static?publication={file}/{publication_}" alt="Чето не так" controls>\n'''
+    return f'''<{type} class="slide_img_{slide_img_num} slide{slide_num}" src="./static?publication={file}/{publication_}" alt="Чето не так" controls>\n'''
 
 def slide_(slide,btn_num):
     return f'''
