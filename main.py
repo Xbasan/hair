@@ -3,13 +3,15 @@ from flask import Flask, render_template, request
 import json
 import telebot
 
+
+from post import post_assembly
+
 bot = telebot.TeleBot('идентицыонный ключ бота')
 
 app = Flask(__name__)
 
-
 def sending_message(data):
-    bot.send_message(id чата в виде числа ,
+    bot.send_message('id чата в виде числа',
                      f'ФИО: {data["fio"]}\n'
                      f'Название оргонизацыи: {data["organization"]}\n'
                      f'Описание Продукта или Услуги: {data["description"]}\n'
@@ -22,11 +24,15 @@ def hair_():
     return render_template('index.html')
 
 def news_():
-    return render_template('news.html')
+    news = post_assembly()
+    return render_template('news.html', post=news)
 
 def about_us_():
     return render_template('about_us.html')
 
+@app.route('/news_js')
+def news_html():
+    return post_assembly()
 
 @app.route('/',
            methods=['GET', 'HEAD', ])

@@ -68,3 +68,4 @@ document.getElementById('button_2').addEventListener('click', () =>{
     document.getElementById('application').style.display = 'none'
   })
 
+

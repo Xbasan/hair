@@ -580,7 +580,7 @@ to {
   gap: 30px;
 }
 
-.post{
+.news .post{
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -596,11 +596,11 @@ to {
   box-shadow: 0 10px 100px 4px rgba(2, 255, 129, 0.795);
 }
 
-.post:last-of-type{
+.news .post:last-of-type{
   margin-bottom:100px ;
 }
 
-.slider{
+.news .post .slider{
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -609,7 +609,7 @@ to {
   position: relative;
 }
 
-.publication{
+.news .post .slider .publication{
   display: flex;
   justify-content: center;
   max-width: 100%;
@@ -617,9 +617,19 @@ to {
   overflow: hidden;
 }
 
+.slider .publication img{
+  max-width: 840px;
+  max-height: 520px;
+}
+.slider .publication video{
+  max-width: 840px;
+  max-height: 520px;
+}
 
 
-.button_slider{
+
+
+.news .post .slider .button_slider{
   display: flex;
 
   justify-content: center;
