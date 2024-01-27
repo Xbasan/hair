@@ -54,7 +54,7 @@ def post_assembly():
                  f'</div>\n'
                  f'</div>\n')
         i+=1
-    return news + '''   <script src="{{ url_for('static', filename= 'js/slider.js') }}"></script>'''
+    return news
 
 
 

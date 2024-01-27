@@ -351,6 +351,8 @@ embed[type="application/pdf"] { filter: invert(100%) contrast(90%); }
   filter: invert(100%) hue-rotate(180deg) contrast(90%) !important;
 }
 
+
+
 body{
   position: relative;
 
@@ -369,7 +371,13 @@ body{
   overflow-y: auto;
 }
 
+#crutch{
+  position: absolute;
 
+  z-index: 1000000;
+  width: 10000%;
+  height: 100000%;
+}
 /*----------------------------------------------------*/
 /*------------------------nav-------------------------*/
 /*----------------------------------------------------*/

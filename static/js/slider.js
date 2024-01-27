@@ -1,4 +1,4 @@
-function initializeSlider(selector, slides) {
+function initializeSlider(selector, slides) { 
    let currentSlide = 0;
 
    function showSlide(index) {
@@ -6,8 +6,7 @@ function initializeSlider(selector, slides) {
            slide.style.display = i === index ? 'block' : 'none';
        });
    }
-
-   document.getElementById(`${selector}_left`).addEventListener('click', () => {
+   document.querySelector(`#${selector}_left`).addEventListener('click', () => {
        currentSlide = (currentSlide - 1 + slides.length) % slides.length;
        showSlide(currentSlide);
    });
@@ -18,9 +17,8 @@ function initializeSlider(selector, slides) {
    });
 
    showSlide(currentSlide);
+
 }
-
-
 
 const slides1 = document.querySelectorAll('.slide_img_1');
 const slides2 = document.querySelectorAll('.slide_img_2');
@@ -36,7 +34,6 @@ const slides11 = document.querySelectorAll('.slide_img_11');
 const slides12 = document.querySelectorAll('.slide_img_12');
 const slides13 = document.querySelectorAll('.slide_img_13');
 
-
 initializeSlider('post_1', slides1);
 initializeSlider('post_2', slides2);
 initializeSlider('post_3', slides3);
@@ -50,6 +47,5 @@ initializeSlider('post_10', slides10);
 initializeSlider('post_11', slides11);
 initializeSlider('post_12', slides12);
 initializeSlider('post_13', slides13);
-
 
 
