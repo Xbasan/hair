@@ -3,7 +3,7 @@ from flask import Flask, render_template, request
 import json
 import telebot
 
-
+import post
 from post import post_assembly
 
 bot = telebot.TeleBot('идентицыонный ключ бота')
@@ -21,18 +21,15 @@ def sending_message(data):
 
 
 def hair_():
-    return render_template('index.html')
+    return render_template('index.html', motto='БЫСТРО.КАЧЕСТВЕННО.ДОРОГО.', name='' )
 
 def news_():
     news = post_assembly()
-    return render_template('news.html', post=news)
+    return render_template('news.html', news=news)
 
 def about_us_():
     return render_template('about_us.html')
 
-@app.route('/news_js')
-def news_html():
-    return post_assembly()
 
 @app.route('/',
            methods=['GET', 'HEAD', ])
@@ -42,7 +39,7 @@ def html_():
     if html is not None:
         match html:
             case 'app':
-                return render_template('index.html')
+                return hair_()
             case 'news':
                 return news_()
             case 'about_us':
