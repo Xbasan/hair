@@ -6,7 +6,8 @@
     <link rel="stylesheet" href="{{ url_for('static', filename= 'css/style.css') }}">
     <link rel="stylesheet" media="screen and (max-device-width:480px)" href="{{ url_for('static', filename= 'css/mobile_style.css') }}" />
 
-    <title>Хайр</title>
+    <title>Хайр{% if news %}-новасти{% else %}{% endif %}
+    </title>
 </head>
 <body>
     <nav>
@@ -42,7 +43,13 @@
         </div>
     </footer>
 
+
+    {% if news %}
+    <script src="{{ url_for('static', filename= 'js/slider.js') }}"></script>
+    {% else %}
     <script src="{{ url_for('static', filename= 'js/script.js') }}"></script>
-   <script src="{{ url_for('static', filename= 'js/slider.js') }}"></script>
+    {% endif %}
+    
+   
 </body>
 </html>

@@ -54,7 +54,7 @@ def post_assembly():
                  f'</div>\n'
                  f'</div>\n')
         i+=1
-    return news
+    return f'<div class="news">{news}</div>'
 
 
 
