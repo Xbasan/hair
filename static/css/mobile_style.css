@@ -20,14 +20,20 @@ section main .h2_abaut_em{
   font-size: 20px;
 }
 
-section main button{
-  width: 200px; 
-  height: 60px; 
+section main .button_div{
+  width: 240px; 
+  height: 100px;
 
-  font-size: 20px;
   position: absolute;
   bottom: -400px;
-  left: 22%;
+  left: 18%;
+}
+
+section main .button_div button{
+  width: 90%; 
+  height: 70%; 
+
+  font-size: 20px;
 }
 
 .application{

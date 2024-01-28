@@ -451,9 +451,19 @@ section main .h2_abaut_em{
   font-size: 24px;
 }
 
-main button {
+main .button_div{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
   margin-top: 14vb;
   margin-left: 2vb;
+  width: 300px; 
+  height: 100px; 
+}
+
+main .button_div button {
   width: 280px; 
   height: 80px; 
 
@@ -474,8 +484,9 @@ main button {
 
 
 #h3_true{
-  padding: 0px;
-  margin-left:8% ;
+  padding: 2%;
+
+  display: block;
 }
 
 /*----------------------------------------------------*/
