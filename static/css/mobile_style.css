@@ -11,13 +11,18 @@ section main{
 }
 
 section main h1{
-  font-size: 32px;
+  font-size: 47px;
   margin-top: 40px;
   margin-bottom: 20px;
 }
 
 section main .h2_abaut_em{
+  text-align:  center;
+
   font-size: 20px;
+}
+section main .h2_abaut_em span{
+  padding: 10px;
 }
 
 section main .button_div{
