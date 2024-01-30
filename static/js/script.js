@@ -46,7 +46,7 @@ document.getElementById('button_2').addEventListener('click', () =>{
             }else{
                 document.getElementById("p5").style.color = 'rgba(255, 251, 0, 0)'
                 sendRequest('POST', requestURL, Request()).then(data=>console.log(data)).catch(err=>console.log(err))
-                document.getElementById("h3_true").innerHTML='Ваша заявка на расмотрении '
+                document.getElementById("h3_true").innerHTML='Ваша заявка на расмотрении'
                 document.getElementById("application").style = 'display: none; '
             }
           }else{document.getElementById("p4").innerHTML='неполные даннвые'}

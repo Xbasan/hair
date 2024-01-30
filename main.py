@@ -21,7 +21,7 @@ def sending_message(data):
 
 
 def hair_():
-    return render_template('index.html', motto='БЫСТРО.КАЧЕСТВЕННО.ДОРОГО.', name='Хаир' )
+    return render_template('index.html', motto='БЫСТРО.КАЧЕСТВЕННО.ДОРОГО.', name='СК «ХАЙР»' )
 
 def news_():
     news = post_assembly()
