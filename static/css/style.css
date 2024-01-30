@@ -742,8 +742,8 @@ align-items: center;
 justify-content: center;
 gap: 1vh;
 
-border-top: solid 2px rgb(68, 80, 252) ;
-border-bottom: solid 2px rgb(68, 80, 252) ;
+border-top: solid 1px #fbec0b ;
+border-bottom: solid 1px #fbec0b ;
 }
 
 footer button{
