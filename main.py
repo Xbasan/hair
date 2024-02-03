@@ -71,7 +71,7 @@ def api_json_():
 # --------------------------------------------------------------
 
 @app.route('/static',
-           methods=['GET', 'HEAD', ])
+            methods=['GET', 'HEAD', ])
 def static_():
     publication = request.args.get('publication')
     publication_mp4 = request.args.get('publication_mp4')
