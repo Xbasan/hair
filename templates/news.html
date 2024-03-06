@@ -1,9 +1,40 @@
 {% extends 'main.html' %}
 
-{% block content %} 
+{% block content %}
 
-{{ news | safe}}
+<div class="news">
 
+    {% for i, j in news.items() %}
+    <div class ="post post_{{ i }}">
+        <div class="slider">
+            <div class="publication">
+
+                {% for q in j['image'] %}
+                <img class="slide_img_{{ i }} slide{{ i }}" src="./static?publication={{ i }}/{{ q }}" alt="ww">
+                {% endfor %}
+
+                {% for q in j['video'] %}
+                <video class="slide_img_{{ i }} slide{{ i }}" src="./static?publication={{ i }}/{{ q }}" alt="ww" controls>
+                </video>
+                {% endfor %}
+            </div>
+            <div class="button_slider">
+                <button id="post_{{ i }}_left" class="left button_s"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAUElEQVR4nO2UsQnAMAwET5tlomSVpPO0jhsFjHH7wYY/UPsHEnowZkLkSAjgAYpCEhn+AhU4lOGnw+Vr+QR3J7gQEJYs82jjTSRV8UvZmQ1pR+wf4JpfHEcAAAAASUVORK5CYII="></button>
+                <button id="post_{{ i }}_right" class="right button_s"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAS0lEQVR4nO2UsQ0AIQwDL5uxTdbhO6YFmhQsYD1IPiltTolkgzFF1EgI4AOGStKACawSSSR5SGSXpCVXvCq9/JegBdCVAZOXnXmcDdAZH+AfKMBTAAAAAElFTkSuQmCC"></button>
+            </div>
+
+        </div>
+
+
+        <div class="description">
+            <p class="description_p">
+                {{ j['description'] }}
+            </p>
+        </div>
+    </div>
+
+    {% endfor %}
+</div>
 
 {% endblock %}
 

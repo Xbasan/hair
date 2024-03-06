@@ -10,6 +10,7 @@ bot = telebot.TeleBot('идентицыонный ключ бота')
 
 app = Flask(__name__)
 
+
 def sending_message(data):
     bot.send_message('id чата в виде числа',
                      f'ФИО: {data["fio"]}\n'
@@ -19,13 +20,14 @@ def sending_message(data):
                      f'Цена: {data["price"]}\n')
 
 
-
 def hair_():
-    return render_template('index.html', motto='БЫСТРО.КАЧЕСТВЕННО.ДОРОГО.', name='СК «ХАЙР»' )
+    return render_template('index.html', motto='БЫСТРО.КАЧЕСТВЕННО.ДОРОГО.', name='СК «ХАЙР»')
+
 
 def news_():
     news = post_assembly()
     return render_template('news.html', news=news)
+
 
 def about_us_():
     return render_template('about_us.html')
@@ -46,16 +48,19 @@ def html_():
                 return about_us_()
             case _:
                 return hair_()
-    else: return hair_()
-    
+    else:
+        return hair_()
+
+
 # ------------------------error------------------------------
 
 @app.errorhandler(404)
 def error_(e):
     with open('./templates/index.html',
               'rb') as file:
-        response = file.read( )
+        response = file.read()
     return response, 404, {"Content-Type": 'text/html'}
+
 
 # -------------------------POST------------------------------
 
@@ -71,7 +76,7 @@ def api_json_():
 # --------------------------------------------------------------
 
 @app.route('/static',
-            methods=['GET', 'HEAD', ])
+           methods=['GET', 'HEAD', ])
 def static_():
     publication = request.args.get('publication')
     publication_mp4 = request.args.get('publication_mp4')
